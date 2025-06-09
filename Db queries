@@ -1,0 +1,19 @@
+-- database: ./database.db
+
+SELECT * FROM Product;
+--Everything
+SELECT Producers.Name, Product.Model FROM Product
+JOIN Producers ON Producers.ProducerID=Product.ProducerID;
+--Prod and Model
+SELECT Product.Model FROM Product
+JOIN Producers ON Producers.ProducerID=Product.ProducerID
+WHERE Producers.Name="Scrimblo";
+--Model of one Prod
+SELECT Product.ProductID, Producers.Name, Product.Model, Product.ImageURL
+FROM Product
+JOIN Producers ON Producers.ProducerID=Product.ProducerID;
+--only id, prod, model and imgurl
+SELECT * FROM Product
+JOIN Producers ON Producers.ProducerID=Product.ProducerID
+WHERE Product.ProductID=3;
+--only one prod based on id

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- just one prod -->
+ <!-- two column grid -->
+  <div class="two-column">
+    <!-- image on left -->
+    <img src="{{ product[6] }}" alt="{{ product[2] }}">
+    <!--- info panel -->
+    <div class="info">
+        <h1>Top Speed: {{ product[3] }}mph</h1>
+        <h1>Cost: ${{ product[4] }}</h1>
+        <h1>Description</h1>
+        <h1>{{ product[5] }}</h1>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- home page goes here -->
+ <!-- a 3 column grid -->
+  <div class="three-column">
+    {% for product in results %}
+    <a href="{{ url_for('product',id=product[0]) }}">
+        <div class="w3-card-4">
+            <!-- the name then the image -->
+            <h1>{{ product[1] }} {{ product[2] }}</h1>
+            <img src="{{ product[3] }}" alt="{{ product[2] }}">
+        </div>
+    </a>
+    {% endfor %}
+  </div>
+{% endblock %}

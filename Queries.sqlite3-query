@@ -1,0 +1,16 @@
+-- database: ./database.db
+
+SELECT * FROM Product;
+--Everything
+SELECT Producers.Name, Product.Model FROM Product
+JOIN Producers ON Producers.ProducerID=Product.ProducerID;
+--Prod and Model
+SELECT Product.Model FROM Product
+JOIN Producers ON Producers.ProducerID=Product.ProducerID
+WHERE Producers.Name="Scrimblo";
+--Model of one Prod
+
+--This is to help Cory
+
+SELECT * FROM station
+WHERE MOD(ID,2)=1;
